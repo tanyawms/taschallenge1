@@ -1,0 +1,14 @@
+---
+
+- name: Copy Files
+  copy: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: './wordpress/', dest: '/home/ubuntu/wordpress/' }
+    - { src: './www/', dest: '/home/ubuntu/www/' }
+    - { src: './mariadb/', dest: '/home/ubuntu/mariadb/' }
+    - { src: './php/', dest: '/home/ubuntu/php/' }
+    - { src: './nginx/', dest: '/home/ubuntu/nginx/' }
+    - { src: './docker-compose.yml', dest: '/home/ubuntu/' }
+    
+- name: WP_Maria Docker Compose
+  raw: docker-compose -f /home/ubuntu/docker-compose.yml up -d

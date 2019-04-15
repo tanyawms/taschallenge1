@@ -1,0 +1,31 @@
+---
+# Get Updates
+- name: Update 1
+  raw: apt-get update -y
+  
+- name: Get Curl
+  raw: apt-get install apt-transport-https ca-certificates curl software-properties-common -y
+
+- name: Update 2
+  raw: apt-get update -y
+  
+- name: Install Git
+  raw: sudo apt-get install git -y
+
+- name: Update 3
+  raw: apt-get update -y
+  
+- name: Install Pip
+  raw: apt-get install python-pip python-dev build-essential -y
+
+- name: Install Docker
+  raw: apt-get install docker.io -y
+
+- name: Add user to docker group
+  raw: usermod -aG docker ubuntu
+
+- name: Start Docker
+  raw: service docker restart
+
+- name: Install Docker compose
+  raw: pip install docker-compose==1.3.0
