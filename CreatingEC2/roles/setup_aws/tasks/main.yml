@@ -75,13 +75,11 @@
     region: "{{ aws_region }}"
     group_id: "{{ web_securitygid }}"
     vpc_subnet_id: "{{ subnetid }}" 
-    instance_tags:
-      env: "{{ prod_env }}"
     wait: yes
     assign_public_ip: yes
     exact_count: 1
     count_tag:
-      env: "{{ prod_env }}" 
+      env: taschallenge1
   register: ec2 
 
 - name: Add IP to ec2_hosts group

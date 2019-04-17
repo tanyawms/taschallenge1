@@ -26,10 +26,10 @@ mariadb:
    ports:
      - "3306:3306"
    environment:
-       MYSQL_ROOT_PASSWORD: D00manp1rb
+       MYSQL_ROOT_PASSWORD: P2P121junm3
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
-       MYSQL_PASSWORD: TaW271226
+       MYSQL_PASSWORD: P2P121junm3
    expose:
      - "3306"
 
@@ -44,7 +44,7 @@ wordpress:
    environment:
        WORDPRESS_DB_HOST: mariadb:3306
        WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: TaW271226
+       WORDPRESS_DB_PASSWORD: P2P121junm3
        WORDPRESS_DB_NAME: wordpress
       
 phpmyadmin:
@@ -56,4 +56,4 @@ phpmyadmin:
      - 8183:80
    environment:
        MYSQL_USERNAME: wordpress
-       MYSQL_ROOT_PASSWORD: D00manp1rb
+       MYSQL_ROOT_PASSWORD: P2P121junm3
